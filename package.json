@@ -1,0 +1,29 @@
+{
+  "name": "leadconduit-service_being_integrated",
+  "description": "LeadConduit integration with Service_Being_Integrated",
+  "author": "Developer Name <dev@service_being_integrated.com>",
+  "version": "0.0.1",
+  "main": "index.js",
+  "licenses": [{
+    "type": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International",
+    "url": "http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode"
+  }],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=0.10.31"
+  },
+  "scripts": {
+    "test": "cake test",
+    "prepublish": "cake build"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "coffee-script": ">= 1.8.0",
+    "mocha": ">= 1.21.0",
+    "chai": ">= 1.9.1"
+  }
+}
