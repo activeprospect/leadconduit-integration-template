@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>LeadConduit Integration Template by activeprospect</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>LeadConduit Integration Template</h1>
+        <p>LeadConduit integration code template</p>
+
+        <p class="view"><a href="https://github.com/activeprospect/leadconduit-integration-scaffold">View the Project on GitHub <small>activeprospect/leadconduit-integration-scaffold</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/activeprospect/leadconduit-integration-scaffold/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/activeprospect/leadconduit-integration-scaffold/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/activeprospect/leadconduit-integration-scaffold">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="leadconduit-integration-scaffold" class="anchor" href="#leadconduit-integration-scaffold"><span class="octicon octicon-link"></span></a>LeadConduit Integration Scaffold</h1>
+
+<p>Use this module as a starting-place template for LeadConduit integrations. It includes standard structure and example code for both inbound and outbound integrations. </p>
+
+<p>Learn more about the <a href="http://activeprospect.com/products/leadconduit/">LeadConduit platform</a>.</p>
+
+<h2>
+<a name="customization-steps" class="anchor" href="#customization-steps"><span class="octicon octicon-link"></span></a>Customization steps</h2>
+
+<ol>
+<li>Make a copy of this entire project. </li>
+<li>If you cloned it from github, delete the <code>.git</code> directory, and then run <code>git init</code> to create a new repo</li>
+<li>run <code>npm install</code> to install the default node modules needed to start development</li>
+<li>run <code>cake test</code> - this scaffold includes a dummy <code>test</code> task that searches for text substitutions you haven't made yet. Replace all the instances of "service_being_integrated" with the name of the service you're making an integration for. Once that's done, delete that task from <code>Cakefile</code> and uncomment the real <code>test</code> task, which should have all passing tests to start with. Get used to writing tests and executing them with <code>cake test</code>. <strong>Your integration will not be added to the LeadConduit platform without adequate test coverage.</strong>
+</li>
+<li>Integrations may be made for requests that are "inbound" to LeadConduit, or for posts that are "outbound" from LeadConduit, or both. Customize or delete the <a href="http://coffeescript.org/">CoffeeScript</a> files in the <code>src</code> and <code>spec</code> directories as needed.</li>
+<li>create a Github repository and push your code</li>
+<li><em>review by ActiveProspect, changes or fixes as necessary</em></li>
+<li><em>module is published to <a href="https://npmjs.org/">npm</a></em></li>
+<li><em>module is made available in LeadConduit</em></li>
+</ol><p><em>Delete this line and everything above when your integration module is ready to publish.</em></p>
+
+<h1>
+<a name="leadconduit-service-being-integrated-integration" class="anchor" href="#leadconduit-service-being-integrated-integration"><span class="octicon octicon-link"></span></a>LeadConduit Service-Being-Integrated Integration</h1>
+
+<p>This module is for use on the LeadConduit platform. Please see the <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">license agreement</a>.</p>
+
+<p><a href="https://travis-ci.org/service_being_integrated/"><img src="https://travis-ci.org/service_being_integrated.png?branch=master" alt="Build Status"></a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/activeprospect">activeprospect</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
