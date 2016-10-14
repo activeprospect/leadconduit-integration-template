@@ -22,15 +22,15 @@ request = (vars) ->
 
   # data to be included in the body can simply be constructed as an object literal
   body =
-    unmappable_val_1: "abracadabra"
+    unmappable_val_1: 'abracadabra'
     unmappable_val_2: vars.lead.email.domain if vars.lead.email?
     service_being_integrated_account_id: vars.service_being_integrated_account_id
 
   # ...using whatever business logic is necessary
   if Date.now() % 2 == 0
-    body["unmappable_val_3"] = 'evn'
+    body['unmappable_val_3'] = 'evn'
   else
-    body["unmappable_val_3"] = 'odd'
+    body['unmappable_val_3'] = 'odd'
 
   # this optional code adds all key/value pairs from the original lead to the request body
   for key, value of vars.lead
@@ -40,12 +40,12 @@ request = (vars) ->
   body = querystring.encode(body)
 
   request_object =
-    url:    "https://app.leadconduit.com/flows/542c850be1e88a0250a5eee7/sources/53ab40789d29c9d94400004b/submit"
-    method: "POST"
+    url: 'https://app.leadconduit.com/flows/542c850be1e88a0250a5eee7/sources/53ab40789d29c9d94400004b/submit'
+    method: 'POST'
     headers:
-      Accept:           "application/json"
-      "Content-Type":   "application/x-www-form-urlencoded"
-      "Content-Length": body.length
+      Accept: 'application/json'
+      'Content-Type': 'application/x-www-form-urlencoded'
+      'Content-Length': body.length
     body: body
 
   return request_object
