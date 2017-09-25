@@ -20,7 +20,7 @@ Learn more about the [LeadConduit platform](http://activeprospect.com/products/l
 _Delete this line and everything above when your integration module is ready to publish._
 
 
-# LeadConduit Service-Being-Integrated Integration
+# LeadConduit Service_Being_Integrated Integration
 
 This module is for use on the LeadConduit platform. Please see the [license agreement](http://creativecommons.org/licenses/by-nc-nd/4.0/).
 

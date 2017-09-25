@@ -1,3 +1,5 @@
 module.exports = {
-  outbound: require('./lib/outbound')
+  outbound: {
+    request_response: require('./lib/outbound/request_response')
+  }
 };
