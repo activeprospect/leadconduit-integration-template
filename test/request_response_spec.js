@@ -12,7 +12,7 @@ describe('Request/Response', () => {
 
     it('should validate email is present', () => {
       const val = integration.validate(parser({lead: {}}));
-      assert.equal(val, 'email is required');
+      assert.equal(val, 'valid email is required');
     });
 
     xit('should have more tests here', () => {
