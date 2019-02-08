@@ -40,6 +40,12 @@ cd -
 FILES=".gitignore .npmignore .npmrc .travis.yml CHANGELOG.md docs index.js lib package.json test"
 for FILE in $FILES
 do
+  if [ -e "$TARGET_DIR/$FILE" ]
+  then
+    echo "Error: '$TARGET_DIR/$FILE' already exists. Halting."
+    echo $USAGE
+    exit 5
+  fi
   cp -vr "$FILE" "$TARGET_DIR/"
 done
 

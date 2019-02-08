@@ -6,6 +6,10 @@ describe('Request/Response', () => {
 
   describe('Validation', () => {
 
+    it('should pass validation when all required fields are present', () => {
+      assert.isUndefined(integration.validate(parser({lead: {email: 'foo@example.com'}})));
+    });
+
     it('should validate email is present', () => {
       const val = integration.validate(parser({lead: {}}));
       assert.equal(val, 'email is required');

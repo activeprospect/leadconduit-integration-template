@@ -7,6 +7,10 @@ describe('Handle', () => {
 
   describe('Validation', () => {
 
+    it('should pass validation when all required fields are present', () => {
+      assert.isUndefined(integration.validate(parser({lead: {email: 'foo@example.com'}})));
+    });
+
     it('should validate email is present', () => {
       const val = integration.validate(parser({lead: {}}));
       assert.equal(val, 'email is required');
@@ -24,7 +28,7 @@ describe('Handle', () => {
       nock.cleanAll();
     });
 
-    it('should have the lead email', (done) => {
+    it('should succeed with good input', (done) => {
       nock('https://example.com')
         .post('/lookup/123')
         .reply(200, '{ "number": 42 }', {'Content-Type': 'application/json'});
