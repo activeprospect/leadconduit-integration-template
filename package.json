@@ -27,7 +27,7 @@
     "integration-harness": "^0.1.0",
     "leadconduit-integration": "^0.4.1",
     "mocha": "^5.2.0",
-    "nock": "^10.0.6",
+    "nock-nock": "~0.0.1",
     "webpack": "^2.7.0",
     "webpack-dev-middleware": "^1.10.2"
   }
