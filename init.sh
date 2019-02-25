@@ -8,8 +8,8 @@ then
   exit 3
 fi
 
-SERVICE_NAME=$1 # this should have right capitalization, e.g., "SendGrid"
-SERVICE_NAME_LOWER=`echo $SERVICE_NAME | awk '{print tolower($0)}'`
+SERVICE_NAME=$* # this should have right capitalization and spacing, e.g., "Amazon Web Services"
+SERVICE_NAME_LOWER=`echo $SERVICE_NAME | awk '{gsub(/ /, "_"); print tolower($0)}'`
 
 TARGET_DIR=../leadconduit-integration-$SERVICE_NAME_LOWER
 
@@ -37,7 +37,7 @@ git checkout -b init
 
 cd -
 
-FILES=".gitignore .npmignore .npmrc .travis.yml CHANGELOG.md docs index.js lib package.json test"
+FILES=".eslintrc.js .gitignore .npmignore .npmrc .travis.yml CHANGELOG.md docs index.js lib package.json test"
 for FILE in $FILES
 do
   if [ -e "$TARGET_DIR/$FILE" ]

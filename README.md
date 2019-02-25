@@ -4,6 +4,10 @@ Use this module as a starting-place scaffold for LeadConduit integrations. It in
 
 Learn more about the [LeadConduit platform](http://activeprospect.com/products/leadconduit/).
 
+## Initializing with `init.sh`
+
+The `init.sh` script can be used to initialize a new integration module based on this template. It takes one parameter: the single-word name of the service being integrated with (e.g., "SendGrid"). This will create the directory, copy files into it, and crudely customize them.
+
 ## Customization steps 
 
 1. Make a copy of this entire project. 
@@ -22,6 +26,6 @@ _Delete this line and everything above when your integration module is ready to 
 
 # LeadConduit Service_Being_Integrated Integration
 
-This module is for use on the LeadConduit platform. Please see the [license agreement](http://creativecommons.org/licenses/by-nc-nd/4.0/).
+This module is for use on the LeadConduit platform, to integrate with [Service_Being_Integrated](https://service_being_integrated.com).
 
 [![Build Status](https://travis-ci.org/service_being_integrated.png?branch=master)](https://travis-ci.org/service_being_integrated/)

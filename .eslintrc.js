@@ -16,9 +16,9 @@ module.exports = {
             "unix"
         ],
         "brace-style": [
-          "error",
-          "stroustrup",
-          {"allowSingleLine": true}
+            "error",
+            "stroustrup",
+            {"allowSingleLine": true}
         ],
         "quotes": [
             "error",
@@ -29,5 +29,14 @@ module.exports = {
             "error",
             "always"
         ]
-    }
+    },
+    "overrides": [
+        {
+            "files": ["test/fixtures/**"],
+            "rules": {
+                "quotes": "off",
+                "indent":"off"
+            }
+        }
+    ]
 };
