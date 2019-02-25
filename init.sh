@@ -9,7 +9,7 @@ then
 fi
 
 SERVICE_NAME=$* # this should have right capitalization and spacing, e.g., "Amazon Web Services"
-SERVICE_NAME_LOWER=`echo $SERVICE_NAME | awk '{gsub(/ /, "_"); print tolower($0)}'`
+SERVICE_NAME_LOWER=`echo $SERVICE_NAME | awk '{gsub(/ /, "-"); print tolower($0)}'`
 
 TARGET_DIR=../leadconduit-integration-$SERVICE_NAME_LOWER
 

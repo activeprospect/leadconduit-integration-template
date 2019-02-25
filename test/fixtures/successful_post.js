@@ -2,7 +2,7 @@ var nock = require('nock');
 
 nock('https://example.com:443', {"encodedQueryParams":true})
   .post('/lookup/123', "email=foo@bar.com")
-  .reply(200, {"outcome":"success","appendedNumber":42}, [ 'Cache-Control',
+  .reply(200, {"outcome":"success","number":42}, [ 'Cache-Control',
   'max-age=604800',
   'Content-Type',
   'text/html; charset=UTF-8',
