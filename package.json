@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "main": "index.js",
   "license": "UNLICENSED",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/activeprospect/leadconduit-integration-service_being_integrated"
@@ -20,7 +21,8 @@
     "lodash": "^4.17.11",
     "request": "^2.88.0",
     "simple-angular-pagination": "0.0.3",
-    "text-loader": "0.0.1"
+    "text-loader": "0.0.1",
+    "webpack": "^2.7.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
@@ -28,7 +30,6 @@
     "leadconduit-integration": "^0.4.1",
     "mocha": "^5.2.0",
     "nock-nock": "~0.0.1",
-    "webpack": "^2.7.0",
     "webpack-dev-middleware": "^1.10.2"
   }
 }

@@ -1,6 +1,9 @@
-# LeadConduit Integration Scaffold
+# LeadConduit Integration Template
 
-Use this module as a starting-place scaffold for LeadConduit integrations. It includes standard structure and example code for both inbound and outbound integrations. 
+Use this module as a starting-place scaffold for LeadConduit integrations. It includes standard structure and example code for both inbound and outbound integrations.
+
+**Note:** this is a source-only repository. It should never be published
+as a package to npm.
 
 ## Initializing with `init.sh`
 
