@@ -1,12 +1,24 @@
 #!/usr/bin/env bash
 
 USAGE="$0: Usage is: $0 ServiceBeingIntegrated"
+FILES=".eslintrc.js .gitignore .npmignore .npmrc .travis.yml CHANGELOG.md docs index.js lib package.json test"
 
 if [ -z "$1" ]
 then
   echo $USAGE
   exit 3
 fi
+
+# make sure all the files are here (& we're running this from the right place)
+for FILE in $FILES
+do
+  if [ ! -e "$FILE" ]
+  then
+    echo "$0: File '$FILE' not found"
+    echo "$0: This script must be run from the template repo directory"
+    exit 8
+  fi
+done
 
 SERVICE_NAME=$* # this should have right capitalization and spacing, e.g., "Amazon Web Services"
 SERVICE_NAME_LOWER=`echo $SERVICE_NAME | awk '{gsub(/ /, "-"); print tolower($0)}'`
@@ -37,7 +49,6 @@ git checkout -b init
 
 cd -
 
-FILES=".eslintrc.js .gitignore .npmignore .npmrc .travis.yml CHANGELOG.md docs index.js lib package.json test"
 for FILE in $FILES
 do
   if [ -e "$TARGET_DIR/$FILE" ]
