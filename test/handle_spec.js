@@ -3,7 +3,7 @@ const nocknock = require('nock-nock');
 const integration = require('../lib/outbound/handle');
 const parser = require('leadconduit-integration').test.types.parser(integration.requestVariables());
 
-describe('Handle', () => {
+describe('Outbound Handle', () => {
 
   describe('Validation', () => {
 

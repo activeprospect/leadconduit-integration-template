@@ -2,7 +2,7 @@ const assert = require('chai').assert;
 const integration = require('../lib/outbound/request_response');
 const parser = require('leadconduit-integration').test.types.parser(integration.request.variables());
 
-describe('Request/Response', () => {
+describe('Outbound Request/Response', () => {
 
   describe('Validation', () => {
 
