@@ -10,7 +10,7 @@
       <button @click="cancel" class="tertiary-control">Cancel</button>
       <button v-if="showPrev" @click="prev" class="tertiary-control">Prev</button>
       <slot name="footer"></slot>
-      <button v-if="showNext" @click="next" class="primary">Next</button>
+      <button v-if="showNext" @click="next" class="primary" :disabled="disabled">Next</button>
     </footer>
   </div>
 </template>
@@ -23,6 +23,10 @@ export default {
       type: Boolean,
       default: true,
     },
+    disabled: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {

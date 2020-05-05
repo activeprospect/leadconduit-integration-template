@@ -1,12 +1,12 @@
 <template>
   <div>
     <Navigation
-      :show-next="listId"
+      :disabled="apiKey"
       >
       <form>
-        <h5>Enter a made-up List ID:</h5>
+        <h5>Enter a made-up API key:</h5>
         <input
-            v-model="listId"
+            v-model="apiKey"
             type="text"
         >
       </form>
@@ -18,7 +18,7 @@
   export default {
     data() {
       return {
-        listId: '',
+        apiKey: '',
       };
     },
     components: {Navigation}
