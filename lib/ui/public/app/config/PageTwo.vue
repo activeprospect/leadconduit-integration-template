@@ -30,7 +30,7 @@
     },
     computed: {
       simpleResult () {
-        return this.$store.getters.simpleResult;
+        return this.$store.state.simpleResult;
       }
     },
     components: {Navigation}
