@@ -1,7 +1,8 @@
 <template>
   <div>
     <Navigation
-      :disabled="apiKey"
+      title="Set up Service_Being_Integrated"
+      :disabled="!apiKey"
       >
       <form>
         <h5>Enter a made-up API key:</h5>
