@@ -1,6 +1,7 @@
 <template>
   <Navigation
-
+    title="Set up Service_Being_Integrated"
+    :showNext="false"
     >
     <section>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -18,19 +19,31 @@
         </ul>
       </form>
     </section>
+    <template v-slot:footer>
+      <button @click="finish" class="primary">Finish</button>
+    </template>
   </Navigation>
 </template>
 <script>
-  import Navigation from "./components/Navigation";
+  import Navigation from "./components/Navigation.vue";
   export default {
     data() {
       return {
-        simpleResult: ''
+        simpleResult: '',
+        options: {
+          first: false,
+          second: false
+        }
       }
     },
     computed: {
       simpleResult () {
-        return this.$store.getters.simpleResult;
+        return this.$store.state.simpleResult;
+      }
+    },
+    methods: {
+      finish() {
+        this.$store.dispatch('finish');
       }
     },
     components: {Navigation}
