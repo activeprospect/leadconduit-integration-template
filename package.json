@@ -11,6 +11,7 @@
   },
   "scripts": {
     "test": "harness && mocha",
+    "test:coverage:lcov": "nyc --reporter=lcov npm test",
     "prepare": "webpack --config lib/ui/webpack.config.js",
     "postpublish": "rm lib/ui/public/dist/*"
   },
@@ -40,6 +41,7 @@
     "integration-harness": "^0.1.0",
     "leadconduit-integration": "^0.4.1",
     "mocha": "^5.2.0",
-    "nock-nock": "~0.0.1"
+    "nock-nock": "~0.0.1",
+    "nyc": "^15.1.0"
   }
 }
