@@ -41,4 +41,4 @@ _**Delete this line and everything above when your integration module is ready t
 
 This module is for use on the LeadConduit platform, to integrate with [Service_Being_Integrated](https://service_being_integrated.com).
 
-[![Build Status](https://travis-ci.com/activeprospect/leadconduit-integration-service_being_integrated.svg?token=abc&branch=master)](https://travis-ci.com/activeprospect/leadconduit-integration-service_being_integrated)
+[![Build Status](https://github.com/activeprospect/leadconduit-integration-service_being_integrated/workflows/Node.js%20CI/badge.svg)](https://github.com/activeprospect/leadconduit-integration-service_being_integrated/actions)
