@@ -10,12 +10,15 @@ module.exports = {
     'standard'
   ],
   parserOptions: {
-    ecmaVersion: 11,
     sourceType: 'module'
   },
   plugins: [
     'vue'
   ],
   rules: {
+    "semi": [2, "always"],
+    "no-extra-semi": 2,
+    "no-useless-return": "error",
+    "prefer-const": "error"
   }
 }

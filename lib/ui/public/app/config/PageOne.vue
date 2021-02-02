@@ -5,6 +5,7 @@
       :disabled="!apiKey"
       >
       <form>
+        <!-- todo: think of a better example; this would be auth -->
         <h5>Enter a made-up API key:</h5>
         <input
             v-model="apiKey"

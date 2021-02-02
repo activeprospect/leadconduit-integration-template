@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 USAGE="$0: Usage is: $0 ServiceBeingIntegrated"
-FILES=".eslintrc.js .gitignore .npmignore .npmrc .travis.yml CHANGELOG.md docs index.js lib package.json test"
+FILES=".eslintrc.js .github .gitignore .npmignore .npmrc .travis.yml CHANGELOG.md docs index.js lib package.json test"
 
 if [ -z "$1" ]
 then
@@ -65,3 +65,5 @@ sed -n '/^# LeadConduit.*Integration$/,$p' README.md | sed "s/service_being_inte
 
 # copy modified package.json
 sed "s/service_being_integrated/$SERVICE_NAME_LOWER/g" package.json | sed "s/Service_Being_Integrated/$SERVICE_NAME/g" > "$TARGET_DIR/package.json"
+
+# copy modified outbound w/vars
