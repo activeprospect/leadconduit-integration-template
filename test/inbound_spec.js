@@ -2,9 +2,7 @@ const assert = require('chai').assert;
 const integration = require('../lib/inbound/request_response');
 
 describe('Inbound Request/Response', () => {
-
   describe('Request', () => {
-
     it('should set lead email', () => {
       const req = {
         method: 'GET',
@@ -17,11 +15,9 @@ describe('Inbound Request/Response', () => {
     xit('should have more tests here', () => {
       assert.isTrue(false, 'Need more tests here!');
     });
-
   });
 
   describe('Response', () => {
-
     it('should provide a success outcome', () => {
       const vars = {
         outcome: 'success',
@@ -44,7 +40,5 @@ describe('Inbound Request/Response', () => {
     xit('should have more tests here', () => {
       assert.isTrue(false, 'Need more tests here!');
     });
-
   });
-
 });
