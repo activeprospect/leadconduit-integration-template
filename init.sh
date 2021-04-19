@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 USAGE="$0: Usage is: $0 ServiceBeingIntegrated"
-FILES=".eslintrc.js .github .gitignore .npmignore .npmrc .travis.yml CHANGELOG.md docs index.js lib package.json test"
+FILES=".github .gitignore .npmignore .npmrc CHANGELOG.md docs index.js lib package.json test"
 
 if [ -z "$1" ]
 then
