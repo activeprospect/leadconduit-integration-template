@@ -9,46 +9,26 @@
     "url": "https://github.com/activeprospect/leadconduit-integration-service_being_integrated"
   },
   "scripts": {
-    "test": "harness && mocha",
-    "prepare": "webpack --config lib/ui/webpack.config.js",
-    "postpublish": "rm lib/ui/public/dist/*"
+    "lint": "eslint .",
+    "test": "mocha",
+    "postpublish": "rm lib/ui/public/dist/*",
+    "prepublishOnly": "webpack --config node_modules/@activeprospect/integration-dev-dependencies/webpack_config.js",
+    "watch": "webpack --watch --config node_modules/@activeprospect/integration-dev-dependencies/webpack_config.js"
   },
   "dependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "axios": "^0.19.2",
-    "babel-loader": "^8.1.0",
+    "axios": "~0.21.1",
     "body-parser": "^1.19.0",
-    "css-loader": "^3.5.2",
     "express": "^4.17.1",
-    "html-webpack-plugin": "^4.2.0",
     "leadconduit-integration-ui": "^1.1.4",
-    "lodash": "^4.17.11",
     "request": "^2.88.0",
     "vue": "^2.6.11",
-    "vue-loader": "^15.9.1",
-    "vue-router": "^3.1.6",
-    "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.6.11",
-    "vuex": "^3.1.3",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-middleware": "^3.7.2",
-    "webpack-dev-server": "^3.10.3"
+    "vue-router": "^3.5.1",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "eslint": "^6.4.0",
-    "eslint-config-semistandard": "^15.0.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^6.2.2",
-    "integration-harness": "^0.1.0",
-    "leadconduit-integration": "^0.4.1",
-    "mocha": "^5.2.0",
+    "@activeprospect/integration-dev-dependencies": "^1.0.0",
+    "integration-harness": "~0.1.0",
+    "leadconduit-integration": "~0.4.1",
     "nock-nock": "~0.0.1"
   }
 }
