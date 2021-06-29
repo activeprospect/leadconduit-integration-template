@@ -1,28 +1,29 @@
 <template>
   <div>
-    <Navigation
-      title="Set up Service_Being_Integrated"
-      :disabled="!apiKey"
+    <form>
+      <!-- todo: think of a better example; this would be auth -->
+      <h5>Enter a made-up URL:</h5>
+      <input
+          v-model="url"
+          type="text"
       >
-      <form>
-        <!-- todo: think of a better example; this would be auth -->
-        <h5>Enter a made-up API key:</h5>
-        <input
-            v-model="apiKey"
-            type="text"
-        >
-      </form>
-    </Navigation>
+    </form>
+    <Navigation :onNext="next" :disableNext="!url"/>
   </div>
 </template>
 <script>
-  import Navigation from "./components/Navigation.vue";
+  import { Navigation } from '@activeprospect/integration-components';
   export default {
     data() {
       return {
-        apiKey: '',
+        url: '',
       };
     },
-    components: {Navigation}
+    methods: {
+      next() {
+        this.$router.push('/2');
+      }
+    },
+    components: { Navigation }
   }
 </script>
