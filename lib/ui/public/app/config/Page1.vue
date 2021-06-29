@@ -1,13 +1,15 @@
 <template>
   <div>
-    <form>
-      <!-- todo: think of a better example; this would be auth -->
+    <header>
+      Set up Service_Being_Integrated
+    </header>
+    <section>
       <h5>Enter a made-up URL:</h5>
       <input
           v-model="url"
           type="text"
       >
-    </form>
+    </section>
     <Navigation :onNext="next" :disableNext="!url"/>
   </div>
 </template>
