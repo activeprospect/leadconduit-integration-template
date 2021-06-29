@@ -13,7 +13,8 @@
     "test": "mocha",
     "postpublish": "rm lib/ui/public/dist/*",
     "prepublishOnly": "webpack --config node_modules/@activeprospect/integration-dev-dependencies/webpack_config.js",
-    "watch": "webpack --watch --config node_modules/@activeprospect/integration-dev-dependencies/webpack_config.js"
+    "watch": "webpack --watch --config node_modules/@activeprospect/integration-dev-dependencies/webpack_config.js",
+    "fixlint": "eslint . --fix"
   },
   "dependencies": {
     "axios": "~0.21.1",
@@ -26,7 +27,7 @@
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@activeprospect/integration-dev-dependencies": "^1.0.0",
+    "@activeprospect/integration-dev-dependencies": "^1.1.4",
     "integration-harness": "~0.1.0",
     "leadconduit-integration": "~0.4.1",
     "nock-nock": "~0.0.1"
