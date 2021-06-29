@@ -4,7 +4,7 @@ module.exports = {
     request_response: require('./lib/inbound/request_response')
   },
   outbound: {
-    handle: require('./lib/outbound/handle'),
+    handle_style: require('./lib/outbound/handle'),
     request_response: require('./lib/outbound/request_response')
   }
 };

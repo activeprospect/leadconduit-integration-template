@@ -1,8 +1,8 @@
 <template>
-  <Navigation
-    title="Set up Service_Being_Integrated"
-    :showNext="false"
-    >
+  <div>
+    <header>
+      Set up Service_Being_Integrated
+    </header>
     <section>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <p>Result of API call to S3: {{ simpleResult }}</p>
@@ -19,13 +19,11 @@
         </ul>
       </form>
     </section>
-    <template v-slot:footer>
-      <button @click="finish" class="primary">Finish</button>
-    </template>
-  </Navigation>
+    <Navigation :onFinish="finish"/>
+  </div>
 </template>
 <script>
-  import Navigation from "./components/Navigation.vue";
+  import { Navigation } from '@activeprospect/integration-components';
   export default {
     data() {
       return {
@@ -46,6 +44,6 @@
         this.$store.dispatch('finish');
       }
     },
-    components: {Navigation}
+    components: { Navigation }
   }
 </script>
