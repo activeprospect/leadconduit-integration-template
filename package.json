@@ -29,8 +29,7 @@
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@activeprospect/integration-dev-dependencies": "^1.1.4",
-    "integration-harness": "~0.1.0",
+    "@activeprospect/integration-dev-dependencies": "^1.1.5",
     "leadconduit-integration": "~0.4.1",
     "nock-nock": "~0.0.1"
   }
