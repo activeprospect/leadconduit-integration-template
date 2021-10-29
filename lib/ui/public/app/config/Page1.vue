@@ -14,18 +14,18 @@
   </div>
 </template>
 <script>
-  import { Navigation } from '@activeprospect/integration-components';
-  export default {
-    data() {
-      return {
-        url: '',
-      };
-    },
-    methods: {
-      next() {
-        this.$router.push('/2');
-      }
-    },
-    components: { Navigation }
-  }
+import { Navigation } from '@activeprospect/integration-components';
+export default {
+  data () {
+    return {
+      url: ''
+    };
+  },
+  methods: {
+    next () {
+      this.$router.push('/2');
+    }
+  },
+  components: { Navigation }
+};
 </script>

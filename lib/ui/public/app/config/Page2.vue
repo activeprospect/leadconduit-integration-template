@@ -23,27 +23,27 @@
   </div>
 </template>
 <script>
-  import { Navigation } from '@activeprospect/integration-components';
-  export default {
-    data() {
-      return {
-        simpleResult: '',
-        options: {
-          first: false,
-          second: false
-        }
+import { Navigation } from '@activeprospect/integration-components';
+export default {
+  data () {
+    return {
+      simpleResult: '',
+      options: {
+        first: false,
+        second: false
       }
-    },
-    computed: {
-      simpleResult () {
-        return this.$store.state.simpleResult;
-      }
-    },
-    methods: {
-      finish() {
-        this.$store.dispatch('finish');
-      }
-    },
-    components: { Navigation }
-  }
+    };
+  },
+  computed: {
+    simpleResult () {
+      return this.$store.state.simpleResult;
+    }
+  },
+  methods: {
+    finish () {
+      this.$store.dispatch('finish');
+    }
+  },
+  components: { Navigation }
+};
 </script>
