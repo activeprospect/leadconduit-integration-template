@@ -14,16 +14,15 @@
         </ul>
       </form>
     </section>
-    <footer>
-      <button v-on:click="$store.dispatch('cancel')">Cancel</button>
-      <button v-on:click="next" :disabled="!credential.token" class="primary">Continue</button>
-    </footer>
+    <Navigation :onNext="next" :disableNext="!credential.token"/>
   </div>
 </template>
 
 <script>
+import { Navigation } from '@activeprospect/integration-components';
 export default {
-  data() {
+  components: { Navigation },
+  data () {
     return {
       credential: this.$store.getters.getCredential || {
         token: '',
@@ -33,9 +32,9 @@ export default {
     };
   },
   methods: {
-    next() {
+    next () {
       this.$store.dispatch('saveCredential', this.credential);
-    },
-  },
+    }
+  }
 };
 </script>
