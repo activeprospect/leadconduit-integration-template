@@ -1,7 +1,7 @@
 {
   "name": "@activeprospect/leadconduit-service_being_integrated",
   "description": "LeadConduit integration with Service_Being_Integrated",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "license": "UNLICENSED",
   "repository": {
