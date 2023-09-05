@@ -17,7 +17,3 @@ jobs:
     - run: npm install
     - name: Run tests
       run: npx nyc@latest --reporter=lcov npm test
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.github_token }}
