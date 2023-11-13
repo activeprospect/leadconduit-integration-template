@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@activeprospect/integration-dev-dependencies": "^1.1.5",
-    "leadconduit-integration": "~0.4.1",
+    "leadconduit-integration": "~0.6.0",
     "nock-nock": "~0.0.1"
   }
 }
