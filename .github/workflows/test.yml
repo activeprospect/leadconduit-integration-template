@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x, 18.x, latest]
+        node-version: [18.x, 20.x, latest]
     env:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
