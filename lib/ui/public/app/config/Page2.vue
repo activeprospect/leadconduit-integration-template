@@ -19,7 +19,7 @@
         </ul>
       </form>
     </section>
-    <Navigation :onFinish="finish"/>
+    <Navigation :on-confirm="finish"/>
   </div>
 </template>
 <script>
@@ -30,14 +30,9 @@ export default {
       simpleResult: '',
       options: {
         first: false,
-        second: false
+        second: true
       }
     };
-  },
-  computed: {
-    simpleResult () {
-      return this.$store.state.simpleResult;
-    }
   },
   methods: {
     finish () {

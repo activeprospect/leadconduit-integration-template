@@ -4,7 +4,7 @@
       Example Authentication
     </header>
     <section>
-      <p>Enter your API Key here
+      <p>Enter your API Key here</p>
       <form>
         <ul>
           <li>
@@ -14,7 +14,7 @@
         </ul>
       </form>
     </section>
-    <Navigation :onNext="next" :disableNext="!credential.token"/>
+    <Navigation :on-confirm="confirm" :disable-confirm="!credential.token"/>
   </div>
 </template>
 
@@ -32,7 +32,7 @@ export default {
     };
   },
   methods: {
-    next () {
+    confirm () {
       this.$store.dispatch('saveCredential', this.credential);
     }
   }

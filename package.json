@@ -17,7 +17,7 @@
     "fixlint": "eslint . --fix"
   },
   "dependencies": {
-    "@activeprospect/integration-components": "^3.0.0",
+    "@activeprospect/integration-components": "^5.0.0",
     "axios": "^1.7.7",
     "body-parser": "^1.19.0",
     "bson-objectid": "^2.0.1",
@@ -29,7 +29,7 @@
     "vuex": "^4.1.0"
   },
   "devDependencies": {
-    "@activeprospect/integration-dev-dependencies": "^1.1.5",
+    "@activeprospect/integration-dev-dependencies": "^2.0.0",
     "leadconduit-integration": "~0.6.0",
     "nock-nock": "~0.0.1"
   }
