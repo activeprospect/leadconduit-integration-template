@@ -17,19 +17,19 @@
     "fixlint": "eslint . --fix"
   },
   "dependencies": {
-    "@activeprospect/integration-components": "^3.0.0",
-    "axios": "~0.21.1",
+    "@activeprospect/integration-components": "^5.0.0",
+    "axios": "^1.7.7",
     "body-parser": "^1.19.0",
     "bson-objectid": "^2.0.1",
     "express": "^4.17.1",
     "leadconduit-integration-ui": "^1.1.4",
     "request": "^2.88.0",
-    "vue": "^2.6.11",
-    "vue-router": "^3.5.1",
-    "vuex": "^3.6.2"
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
-    "@activeprospect/integration-dev-dependencies": "^1.1.5",
+    "@activeprospect/integration-dev-dependencies": "^2.0.0",
     "leadconduit-integration": "~0.6.0",
     "nock-nock": "~0.0.1"
   }

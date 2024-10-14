@@ -10,7 +10,7 @@
           type="text"
       >
     </section>
-    <Navigation :onNext="next" :disableNext="!url"/>
+    <Navigation :on-confirm="confirm" :disable-confirm="!url"/>
   </div>
 </template>
 <script>
@@ -22,7 +22,7 @@ export default {
     };
   },
   methods: {
-    next () {
+    confirm () {
       this.$router.push('/2');
     }
   },
