@@ -1,12 +1,12 @@
 {
-  "name": "@activeprospect/leadconduit-service_being_integrated",
+  "name": "@activeprospect/leadconduit-service-being-integrated",
   "description": "LeadConduit integration with Service_Being_Integrated",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "https://github.com/activeprospect/leadconduit-integration-service_being_integrated"
+    "url": "https://github.com/activeprospect/leadconduit-integration-service-being-integrated"
   },
   "scripts": {
     "lint": "eslint .",
