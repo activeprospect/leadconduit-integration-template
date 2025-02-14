@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
 USAGE="$0: Usage is: $0 ServiceBeingIntegrated"
-MANIFEST=./init_files.txt
-
-if [ ! -f $MANIFEST ]
-then
-  echo "$0: File '$MANIFEST' not found"
-  echo "$0: This script must be run from the template repo directory"
-  exit 8
-fi
 
 if [ -z "$1" ]
 then
   echo $USAGE
   exit 3
+fi
+
+MANIFEST=./init_files.txt
+if [ ! -f $MANIFEST ]
+then
+  echo "$0: File '$MANIFEST' not found"
+  echo "$0: This script must be run from the template repo directory"
+  exit 8
 fi
 
 SERVICE_NAME=$* # this should have right capitalization and spacing, e.g., "Amazon Web Services"
@@ -138,6 +138,9 @@ if [ $? -eq 1 ]
 then
   echo "  ui: require('./lib/ui')," >> $TARGET_DIR/index.js
 
+  ##
+  ## API-backing for the rich UI?
+  ##
   # only ask this if the answer to UI was yes
   prompt_and_copy "Will the UI need a backend API?" apiui
   if [ $? -eq 0 ]
@@ -160,12 +163,18 @@ else
     vuex
 fi
 
+##
+## Request/Response-style outbound?
+##
 prompt_and_copy "Will this integration send leads via REQUEST/RESPONSE functions?" reqres
 if [ $? -eq 1 ]
 then
   echo -e "  outbound: {\n    request_response: require('./lib/outbound/request_response')\n  }" >> $TARGET_DIR/index.js
-  strip_dependencies request nocknock
+  strip_dependencies request nock-nock
 else
+  ##
+  ## Or handle-style outbound?
+  ##
   # only ask if the answer to request/response was no
   prompt_and_copy "Will this integration send leads via a HANDLE function?" handle
   if [ $? -eq 1 ]
